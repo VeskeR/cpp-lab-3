@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "ellipse.h"
+#include "rectangle.h"
 
 MainWindow::MainWindow(QWidget *parent) :
   QMainWindow(parent),
@@ -29,6 +30,9 @@ void MainWindow::paintEvent(QPaintEvent *e)
     rightCirclePen.setWidth(5);
     QBrush rightCircleBrush(Qt::gray);
 
+    QPen rectanglePen(Qt::yellow);
+    QBrush rectangleBrush(Qt::yellow);
+
     // Draw polygon
     QPolygon poly;
     poly << QPoint(70, 180) << QPoint(200, 90) << QPoint(330, 180) << QPoint(280, 320) << QPoint(120, 320);
@@ -45,9 +49,8 @@ void MainWindow::paintEvent(QPaintEvent *e)
     rightEl.draw(painter);
 
     // Draw rectangle
-    painter->setPen(Qt::yellow);
-    painter->setBrush(Qt::yellow);
-    painter->drawRect(50, 250, 300, 50);
+    Rectangle rect(50, 250, 300, 50, rectanglePen, rectangleBrush);
+    rect.draw(painter);
 
     // Draw text
     painter->setPen(Qt::yellow);

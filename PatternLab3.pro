@@ -14,9 +14,11 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    ellipse.cpp
+    ellipse.cpp \
+    rectangle.cpp
 
 HEADERS  += mainwindow.h \
-    ellipse.h
+    ellipse.h \
+    rectangle.h
 
 FORMS    += mainwindow.ui
