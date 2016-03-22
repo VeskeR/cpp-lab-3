@@ -39,10 +39,10 @@ void Ellipse::draw(QPainter *painter)
 
     painter->drawEllipse(-(this->_rx / 2), -(this->_ry / 2), this->_rx, this->_ry);
 
-    painter->setPen(oldPen);
-    painter->setBrush(oldBrush);
     painter->rotate(-this->_rotation);
     painter->translate(-this->_x, -this->_y);
+    painter->setBrush(oldBrush);
+    painter->setPen(oldPen);
 }
 
 void Ellipse::rotate(int degrees)

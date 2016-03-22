@@ -39,23 +39,13 @@ void Rectangle::draw(QPainter *painter)
 
     painter->drawRect(-(this->_width / 2), -(this->_height / 2), this->_width, this->_height);
 
-    painter->setPen(oldPen);
-    painter->setBrush(oldBrush);
     painter->rotate(-this->_rotation);
     painter->translate(-(this->_x + this->_width / 2), -(this->_y + this->_height / 2));
+    painter->setBrush(oldBrush);
+    painter->setPen(oldPen);
 }
 
 void Rectangle::rotate(int degrees)
 {
     this->_rotation += degrees;
-}
-
-void Rectangle::setX(int x)
-{
-    this->_x = x;
-}
-
-void Rectangle::setY(int y)
-{
-    this->_y = y;
 }

@@ -15,10 +15,12 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     ellipse.cpp \
-    rectangle.cpp
+    rectangle.cpp \
+    polygon.cpp
 
 HEADERS  += mainwindow.h \
     ellipse.h \
-    rectangle.h
+    rectangle.h \
+    polygon.h
 
 FORMS    += mainwindow.ui

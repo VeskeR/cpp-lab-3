@@ -13,8 +13,6 @@ public:
 
     void draw(QPainter *painter);
     void rotate(int degrees);
-    void setX(int x);
-    void setY(int y);
 
 private:
     int _x;
