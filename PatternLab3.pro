@@ -13,8 +13,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    ellipse.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    ellipse.h
 
 FORMS    += mainwindow.ui
